@@ -1,0 +1,1300 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+    /*@page {*/
+        /*size: A4 portrait; *//* can use also 'landscape' for orientation */
+        /*margin-top: 3.0in;*/
+        /*margin-bottom: 1.0in;*/
+
+        /*@bottom-center {*/
+            /*content: element(footer);*/
+        /*}*/
+
+        /*@top-center {*/
+            /*content: element(header);*/
+        /*}*/
+    /*}*/
+
+}
+
+/*html5 semantics tags */
+article, aside, figure, footer, header, hgroup, menu, nav, section
+{ display: block; }
+
+/* Clear Floated Elements */
+.clearfix:before, .clearfix:after {content: "\0020";
+    display: block; height: 0; visibility: hidden;}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: #000000;
+    /*padding: 0 20px;*/
+    /*border-color: #ffffff;*/
+    /*border-top: 5px solid #ffffff;*/
+    /*border-left: 5px solid #ffffff;*/
+    /*border-right: 5px solid #ffffff;*/
+    /*border-bottom: 5px solid #ffffff;*/
+    margin: 0;
+    /*width: 794px;*/
+    /*height: 1190px;*/
+    /*border: 1px solid #ffff00;*/
+
+    width: 21cm;
+    /*height: 29.7cm;*/
+    /*height: 100%;*/
+    marks: crop cross;
+
+    /*padding: 2cm;*/
+    /*margin: 1cm auto;*/
+    /*border: 1px #D3D3D3 solid;*/
+    /*border-radius: 5px;*/
+    /*background: #d7ece8;*/
+    /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);*/
+}
+
+
+/* Debug Show lines */
+
+
+aside {
+    margin: 0;
+    padding: 0;
+    position: relative;
+/*    border: 1px dashed blue;*/
+    height: 100%;
+}
+
+/*
+section {
+    min-height: 100%;
+    position: relative;
+    border: 1px dashed red;
+}
+*/
+
+article {
+    border: 1px dashed green;
+}
+
+figure {
+    border: 1px dashed orange;
+}
+
+body > header .number,
+body > header .label,
+body > header .title {
+    border: 1px dashed red;
+}
+
+
+/* Bodymatter */
+section.bodymatter {
+    /*min-height: 100%;*/
+    position: relative;
+}
+
+.lc_bodymatter_intro {
+    height: 100%;
+    background-color: #d7ece8;
+}
+
+.lc_bodymatter_content {
+    height: 100%;
+    background-color: #ffffff;
+}
+
+/* Layout classes PXE */
+.lc_margin_left_bodymatter_front_page {
+    border-left: 4em solid #d7ece8;
+    /*border-top: 4em solid transparent;*/
+    position: relative;
+}
+
+.lc_margin_right_bodymatter_front_page {
+    background: #e9f5f3;
+    /*margin: 0 auto;*/
+    /*min-height: 100%; *//* Set to minimum height so overflow doesn't get hidden */
+    /*overflow-y: hidden; *//* HIDE overflow; I know, it doesn't make much sense */
+    /*top: -3em;*/
+    /*position: relative;*/
+}
+
+
+/* headers */
+body > header {
+    background-image: url('../../img/btec-header-turqoise.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0em 0em;
+    height: 160px;
+}
+
+header.lc_header-short-lhs {
+    background-size: cover;
+    height: 50px;
+}
+
+header.lc_header-short-lhs:before {
+    content: '';
+    border-top: 50px solid transparent;
+    border-right: 50px solid #ffffff;
+    float: right;
+}
+
+header.lc_header-short-rhs {
+    background-size: cover;
+    height: 50px;
+}
+
+
+section > span.header {
+    border-right: 3em solid #000000;
+    border-top: 3em solid #d7ece8;
+    display: inline-block;
+    position: relative;
+    /*top: 2em;*/
+    float: left;
+}
+
+body > header .number,
+body > header .label,
+body > header .title {
+    position: relative;
+}
+
+
+
+/* Layout classes for two columns page */
+.lc_page-column {
+    width: 68%;
+    margin: 1em;
+}
+
+.lc_left-align {
+    float: left;
+}
+
+.lc_right-align {
+    float: right;
+}
+
+.lc_aside_page_left {
+    float: left;
+    width: 20%;
+}
+
+.lc_aside_page_right {
+    float: right;
+    width: 20%;
+}
+
+/* Titles */
+.unit-title {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    /*font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;*/
+    color: #ffffff;
+    font-size: 0.8em;
+    font-weight: bold;
+    letter-spacing: -0.03em;
+}
+
+.unit-title .label,
+.unit-title .number {
+    font-weight: bold;
+}
+
+.lc_unit-title {
+    position: relative;
+    border-right: 3em solid transparent;
+    border-top: 3em solid #000000;
+    width: 70%;
+}
+
+.lc_pull_up_2em {
+    top: -2em;
+}
+
+.lc_pull_down_2em {
+    top: 2em;
+}
+
+.lc_pull_down_bottom {
+    bottom: 0;
+}
+
+div > .label {
+    padding-left: 1em;
+}
+
+div > .title {
+    padding-left: 2em;
+}
+
+.lc_header-unit-title {
+    color: #ffffff;
+    background-color: #2bb6aa;
+    height: 50px;
+    padding-left: 40px;
+    border-bottom: 34px solid #2bb6aa;
+}
+
+.lc_header-unit-title:after {
+    content: '';
+    border-top: 50px solid #2bb6aa;
+    border-right: 50px solid #000000;
+    position: absolute;
+}
+
+
+.lc_header-unit-title-rhs {
+    color: #000000;
+    background-color: #ffffff;
+    height: 50px;
+    padding-right: 40px;
+    width: 70%;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.lc_header-unit-title-rhs:after {
+    content: '';
+    border-bottom: 50px solid #ffffff;
+    border-right: 50px solid transparent;
+    position: absolute;
+}
+
+.lc_header-unit-label-lhs {
+    color: #ffffff;
+    background-color: #000000;
+    padding-left: 40px;
+    border-bottom: 32px solid #000000;
+}
+
+.lc_header-unit-label-lhs:after {
+    content: '';
+    border-top: 50px solid #000000;
+    border-right: 50px solid #bad031;
+    position: absolute;
+}
+
+.lc_header-unit-label-rhs {
+    color: #ffffff;
+    background-color: #000000;
+    height: 50px;
+    width: 60px;
+    padding-right: 20px;
+    position: absolute;
+    top: 0;
+    left: 712px;
+
+}
+
+.lc_header-unit-label-rhs:after {
+    content: '';
+    border-top: 50px solid transparent;
+    border-right: 50px solid #000000;
+    position: absolute;
+    top: 0;
+    left: -50px;
+
+}
+
+.lc_header-unit-number {
+    color: #000000;
+    background-color: #bad031;
+    padding-left: 32px;
+}
+
+.lc_header-unit-number:after {
+    content: '';
+    border-top: 50px solid #bad031;
+    border-right: 50px solid transparent;
+    position: absolute;
+}
+
+
+/* Assessment pages */
+.lc_assessment-head {
+    padding-right: 3em;
+    padding-top: 3em;
+    text-align: right;
+}
+
+.assessment-head {
+    position: relative;
+    left: 10em;
+    height: 20px;
+}
+
+.assessment-head-label {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: #d5d900;
+    font-size: 3em;
+    font-weight: bold;
+    padding-left: 1em;
+}
+
+.assessment-head-title {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.assessment-activity {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    color: #ffffff;
+    font-size: 1em;
+    position: absolute;
+    top: 1em;
+    left: 12em;
+    width: 22em;
+}
+
+section.assessment-zone {
+    background: #d8dded;
+    width: 793px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    position: relative;
+}
+
+section.assessment-zone::before {
+    content: '';
+    bottom: 0;
+    display: inline-block;
+    position: absolute;
+}
+
+.lc_assessment-zone-left::before {
+    width: 0;
+    left: 0;
+    border-bottom: 4em solid #d7ece8;
+    border-right: 4em solid #d8dded;
+    height: 4em;
+}
+
+.lc_assessment-zone-right::before {
+    right: 0;
+    width: 0;
+    border-bottom: 6em solid #d7ece8;
+    border-left: 6em solid #d8dded;
+}
+
+section.assessment-grid {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+section.assessment-grid::before {
+
+}
+
+.assessment-table {
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+section.assessment-a-block {
+    background: #eaedf6;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    position: relative;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+section.assessment-a-block::before {
+    content: '';
+    bottom: 0;
+    right: 0;
+    border-bottom: 4em solid #d8dded;
+    border-left: 4em solid #eaedf6;
+    width: 0;
+    display: inline-block;
+    position: absolute;
+}
+
+
+/* Introduction pages */
+
+.objectives > ul > li {
+    font-style: normal;
+    font-weight: bold;
+    color: #2bb6aa;
+    margin-left: 1em;
+}
+
+
+section.introduction {
+    background: #e9f5f3;
+    margin: 0 auto;
+    /*min-height: 100%; *//* Set to minimum height so overflow doesn't get hidden */
+    /*overflow-y: hidden; *//* HIDE overflow; I know, it doesn't make much sense */
+    position: relative;
+}
+
+section.introduction:after, section.objectiveset:after {
+    content: '';
+    bottom: 0em;
+    left: 0em;
+    border-bottom: 3em solid #d7ece8;
+    border-right: 3em solid transparent;
+    display: inline-block;
+    position: absolute;
+}
+
+.intro-text {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-weight: bold;
+    color: #000000;
+    font-size: 0.9em;
+    position: relative;
+}
+
+section.objectiveset:before {
+    content: '';
+    top: 0em;
+    left: 0em;
+    border-top: 3em solid #d7ece8;
+    border-right: 3em solid #000000;
+    display: inline-block;
+    position: absolute;
+}
+
+.lc_head_intro {
+    top: -3em;
+    z-index: 2;
+    position: absolute;
+}
+
+.lc_head_intro:before {
+    content: '';
+    top: -3em;
+    left: -3em;
+    border-top: 3em solid transparent;
+    border-right: 3em solid #000000;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+}
+
+
+
+.lc_head {
+    border-right: 3em solid transparent;
+    border-top: 3em solid #000000;
+    height: 0em;
+    display: inline-block;
+    margin-left: 3em;
+}
+
+.head {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    /*font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;*/
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: #000000;
+    top: -1.3em;
+}
+
+/* A-heads */
+.a-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 1.8em;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+    padding-top: 0.5em;
+}
+
+.lc_a-head, .lc_b-head {
+    display: inline-block;
+    width: 70%;
+}
+
+.a-head-bullet {
+    border-top: 10px solid #ffffff;
+    border-left: 20px solid #000000;
+    border-bottom: 10px solid #ffffff;
+    font-size: 0px; line-height: 0%; width: 0px;
+    display: inline-block;
+}
+
+/* B-heads */
+.b-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 1.5em;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+    padding-top: 0.5em;
+}
+
+.b-head-bullet {
+    border-top: 10px solid #ffffff;
+    border-left: 20px solid #2bb6aa;
+    border-bottom: 10px solid #ffffff;
+    font-size: 0px; line-height: 0%; width: 0px;
+    display: inline-block;
+}
+
+/* C-head */
+.c-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 1.2em;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+}
+
+.lc_color-green {
+    color: #2bb6aa;
+}
+
+.lc_color-blue {
+    color: #004884;
+}
+
+.gradient {
+    z-index: 1;
+    top: -3em;
+    left: 18em;
+    position: absolute;
+    display: inline-block;
+    height: 3em;
+    width: 100%;
+    /* webkit example */
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 1.0)));
+
+    /* mozilla example - FF3.6+ */
+    background-image: -moz-linear-gradient(right center, rgba(255, 255, 255, 1.0) 20%, rgba(255, 255, 255, 0) 95%);
+
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColor=0, endColorStr=#FFFFFF);
+
+    /* IE8 uses -ms-filter for whatever reason... */
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColor=0, endColoStr=#FFFFFF);
+}
+
+/* 3em = 50px */
+.gradient:after {
+    content: '';
+    border-top: 3em solid #000000;
+    border-right: 3em solid transparent;
+    position: absolute;
+}
+
+/* Layout classes margins */
+.lc_marginalia_full_width {
+    margin-left: 5em;
+    margin-right: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.lc_marginalia_three_quarter_width {
+    margin-left: 3em;
+    margin-right: 10em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.lc_marginalia_right {
+    padding-right: 5em;
+}
+
+.lc_marginalia_top {
+    padding-top: 0.5em;
+}
+
+.lc_position_height_top {
+    top: 1em;
+}
+
+.lc_position_height_10pc {
+    height: 10%;
+}
+
+.lc_position_height_20pc {
+    height: 20%;
+}
+
+.lc_position_height_30pc {
+    top: 11em;
+}
+
+.lc_position_height_40pc {
+    top: 20em;
+}
+
+.lc_position_height_50pc {
+    top: 13em;
+}
+
+.lc_position_height_60pc {
+    top: 32em;
+}
+
+.lc_position_height_70pc {
+    top: 13em;
+}
+
+.lc_position_height_80pc {
+    top: 34em;
+}
+
+.lc_position_height_bottom {
+    top: 41em;
+}
+
+.intro-assessment {
+    background: #96a8cc;
+    position: relative;
+    padding-left: 3em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+section > header h1 {
+    position: relative;
+    padding-right: 4em;
+    display: inline-block;
+    /*z-index: 0;*/
+}
+
+section.introduction > header h1 .title {
+    display: inline-block;
+    position: relative;
+    top: -2.5em;
+}
+
+section.objectiveset {
+    background: #c4e3de;
+    position: relative;
+    overflow-y: hidden; /* HIDE overflow; I know, it doesn't make much sense */
+    padding-bottom: 2em;
+}
+
+.lc_objectiveset-head {
+    border-right: 3em solid transparent;
+    border-top: 3em solid #000000;
+    height: 1em;
+    /*top: -4em;*/
+    position: relative;
+    /*z-index: 0;*/
+
+}
+
+/*section.objectiveset > header {*/
+/*border-right: 4em solid transparent;*/
+/*border-top: 4em solid #000000;*/
+/*display: inline-block;*/
+/*position: relative;*/
+/*}*/
+article.objectiveset {
+    display: inline-block;
+    position: relative;
+}
+
+.objectives > li {
+    font-style: normal;
+    font-weight: bold;
+    color: #2bb6aa;
+}
+
+.lc_alphalist {
+    font-weight: normal;
+    color: #000000;
+}
+
+
+/* Layout classes - figcaption */
+figcaption {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.lc_figcaption {
+    padding-left: 1em;
+    background-color: #e1e6ea;
+    height: 20px;
+}
+
+.lc_figcaption:before {
+    content: '';
+    border-bottom: 20px solid #ffffff;
+    border-left: 20px solid #e1e6ea;
+    float: right;
+}
+
+article.learnervoice {
+    display: inline-block;
+    position: relative;
+    padding-left: 6em;
+    padding-right: 6em;
+    background: #000000;
+    color: #2bb6aa;
+    overflow-y: hidden; /* HIDE overflow; I know, it doesn't make much sense */
+    min-height: 12em;
+    border-radius: 25px;
+}
+
+img.learnervoice {
+    position: relative;
+    left: 2em;
+    top: -10em;
+}
+
+div.lc_chapter_page_img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 0em;
+    position: relative;
+}
+
+div.lc_chapter_title {
+    position: absolute;
+    /*font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;*/
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    /*font-family: "Arial Narrow", Arial, sans-serif;*/
+    font-size: 3em;
+    font-weight: 800;
+    color: #028784;
+    left: 2em;
+    top: 2em;
+}
+
+div.lc_chapter_number {
+    position: absolute;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+    /*font-family: "Arial Narrow", Arial, sans-serif;*/
+    font-size: 13em;
+    color: #FFFFFF;
+    left: 3em;
+    top: 2em;
+}
+
+/* Normal text - this is generic - copied name from Word Styles */
+p.normal-text {
+    margin-top: 0.5em;
+}
+
+article {
+    margin-top: 0.5em;
+}
+
+article.normal-text {
+    margin-top: 0.5em;
+}
+
+/* Articles */
+article > ul > li {
+    font-size: 0.8em;
+}
+
+
+
+/* Article - Introduction */
+article.introduction {
+    border: 2px solid #2bb6aa ;
+    position: relative;
+}
+
+article.introduction:before {
+    content: '';
+        border-bottom: 25px solid #2bb6aa;
+        border-left: 25px solid #ffffff;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+article.introduction:after {
+    content: '';
+    border-bottom: 22px solid #ffffff;
+    border-left: 22px solid transparent;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+
+.intro-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2bb6aa;
+}
+
+.lc_intro-head {
+    color: #ffffff;
+    background-color: #2bb6aa;
+    height: 25px;
+    border-bottom: 2px solid #2bb6aa;
+    padding-left: 0.5em;
+}
+
+.lc_intro-head:after {
+    content: '';
+    border-top: 25px solid #2bb6aa;
+    border-right: 25px solid transparent;
+    position: absolute;
+}
+
+
+.lc_intro-text {
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+
+
+/* Aside feature boxes */
+
+/* key terms */
+span.keyword {
+    color: #004884;
+    font-weight: bold;
+}
+
+
+article.keyword {
+    background-color: #bbe3fa;
+    position: relative;
+    display: inline-block;
+}
+
+div.keyword-logo {
+    background-image: url('../../img/logo-keyterms.gif');
+    background-repeat: no-repeat;
+    background-position: right top;
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 23px;
+    width: 22px;
+}
+
+article.keyword:before {
+        content: '';
+        border-top: 20px solid #ffffff;
+        border-left: 20px solid #bbe3fa;
+    float: right;
+}
+
+article.keyword:after {
+    content: '';
+    border-top: 20px solid #bbe3fa;
+    border-right: 20px solid #ffffff;
+    float: right;
+    display: inline-block;
+}
+
+.keyword-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #93b1c2;
+}
+
+.lc_keyword-head {
+    color: #ffffff;
+    background-color: #93b1c2;
+    height: 25px;
+    border-bottom: 3px solid #93b1c2;
+    padding-left: 1.5em;
+}
+
+.lc_keyword-head:after {
+    content: '';
+    border-top: 20px solid #93b1c2;
+    border-right: 20px solid transparent;
+    position: absolute;
+    display: inline-block;
+    padding-right: 45px;
+
+
+}
+
+.keyword-text {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.lc_keyword-text {
+    padding-top: 0.8em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+
+/* discussion point */
+article.discussionpoint {
+    background-color: #f6f19b;
+    position: relative;
+    display: inline-block;
+}
+
+article.discussionpoint:before {
+    content: '';
+    border-top: 20px solid #ffffff;
+    border-left: 20px solid #f6f19b;
+    float: right;
+}
+
+article.discussionpoint:after {
+    content: '';
+    border-top: 20px solid #f6f19b;
+    border-right: 20px solid #ffffff;
+    float: right;
+    display: inline-block;
+    /*position: absolute;*/
+
+}
+
+div.discussionpoint-logo {
+    background-image: url('../../img/logo-discussionpoint.gif');
+    background-repeat: no-repeat;
+    background-position: right top;
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 23px;
+    width: 22px;
+}
+
+.discussionpoint-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #a5a56e;
+
+}
+
+.lc_discussionpoint-head {
+    color: #ffffff;
+    background-color: #a5a56e;
+    height: 25px;
+    border-bottom: 3px solid #a5a56e;
+    padding-left: 1em;
+    width: 100%;
+}
+
+.lc_discussionpoint-head:after {
+    content: '';
+    border-top: 20px solid #a5a56e;
+    border-right: 20px solid transparent;
+    position: absolute;
+    display: inline-block;
+    padding-right: 8px;
+}
+
+.discussionpoint-text {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.lc_discussionpoint-text {
+    padding-top: 0.8em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+
+/* Link */
+article.link {
+    background-color: #dbe59b;
+    position: relative;
+    display: inline-block;
+}
+
+article.link:before {
+    content: '';
+    border-top: 20px solid #ffffff;
+    border-left: 20px solid #dbe59b;
+    float: right;
+}
+
+article.link:after {
+    content: '';
+    border-top: 20px solid #dbe59b;
+    border-right: 20px solid #ffffff;
+    float: right;
+    display: inline-block;
+    /*position: absolute;*/
+
+}
+
+div.link-logo {
+    background-image: url('../../img/logo-link.gif');
+    background-repeat: no-repeat;
+    background-position: right top;
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 23px;
+    width: 22px;
+}
+
+.link-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #b3cc05;
+
+}
+
+.lc_link-head {
+    color: #ffffff;
+    background-color: #b3cc05;
+    height: 25px;
+    border-bottom: 3px solid #b3cc05;
+    padding-left: 1em;
+}
+
+.lc_link-head:after {
+    content: '';
+    border-top: 20px solid #b3cc05;
+    border-right: 20px solid transparent;
+    position: absolute;
+    display: inline-block;
+    padding-right: 8px;
+    width: 42%;
+}
+
+.link-text {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.lc_link-text {
+    padding-top: 0.8em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+
+
+
+/* Case (Case study) */
+article.case {
+    background-color: #ebead3;
+    /*position: relative;*/
+    display: inline-block;
+/*    border-bottom: 20px solid #ebead3;
+    border-left: 20px solid #ffffff;*/
+}
+
+article.case:before {
+    content: '';
+    border-top: 20px solid #ffffff;
+    border-left: 20px solid #ebead3;
+    float: right;
+}
+
+article.case:after {
+    content: '';
+    border-top: 20px solid #ebead3;
+    border-right: 20px solid #ffffff;
+    float: right;
+    display: inline-block;
+}
+
+div.case-logo {
+    background-image: url('../../img/logo-case.gif');
+    background-repeat: no-repeat;
+    background-position: right top;
+    top: 5px;
+    right: 0;
+    position: absolute;
+    height: 23px;
+    width: 23px;
+}
+
+.case-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #adb144;
+}
+
+.lc_case-head {
+    color: #ffffff;
+    background-color: #adb144;
+    height: 25px;
+    border-bottom: 3px solid #adb144;
+    padding-left: 1em;
+}
+
+.lc_case-head:after {
+    content: '';
+    border-top: 20px solid #adb144;
+    border-right: 20px solid transparent;
+    position: absolute;
+    padding-right: 8px;
+    width: 76%;
+}
+
+.case-text {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.lc_case-text {
+    padding-top: 0.8em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+
+
+.footer {
+    color: #2bb6aa;
+    font-size: 14px !important;
+}
+
+.footer-text {
+    color: #000000;
+    font-size: 14px !important;
+    padding-top: 0.50em;
+    padding-bottom: 0.50em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.lc_footer_page_left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.lc_footer_page_right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.lc_quotestart {
+    /*float: left;*/
+    font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+
+    height: 15px;
+    position: relative;
+    left: -100px;
+    font-size: 1200%;
+    color: #2bb6aa;
+    display: inline-block;
+}
+
+.lc_quoteend {
+    font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+
+    float: right;
+    font-size: 1200%;
+    color: #2bb6aa;
+    position: relative;
+    height: 10px;
+    right: -80px;
+    bottom: 40px;
+}
+
+.lc_featuretext {
+    color: #ffffff;
+    font-weight: normal;
+}
+
+/* line 553, ../sass/theme/g6_layout_fixed.scss */
+div.lc_irg6_pagenum_left {
+    background: #2bb6aa;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+
+    padding-top: 0.50em;
+    padding-bottom: 0.50em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+div.lc_irg6_pagenum_left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 15px solid #d7ece8;
+    border-left: 15px solid #2bb6aa;
+    width: 0;
+}
+
+div.lc_irg6_pagenum_right {
+    background: #2bb6aa;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+    padding-top: 0.50em;
+    padding-bottom: 0.50em;
+    padding-left: 1em;
+    padding-right: 1em;
+    right: 0;
+}
+
+div.lc_irg6_pagenum_right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 15px solid #d7ece8;
+    border-right: 15px solid #2bb6aa;
+    width: 0;
+}
+
+aside, blockquote, figure, header, iframe,
+nav, object, pre, section, table {
+    page-break-inside: avoid;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+}
+
+p {
+    orphans: 2;
+    widows: 2;
+}
