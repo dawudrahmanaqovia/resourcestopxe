@@ -79,8 +79,6 @@ body {
 
 
 /* Debug Show lines */
-
-
 aside {
     margin: 0;
     padding: 0;
@@ -97,7 +95,7 @@ section {
 }
 */
 
-article {
+/*article {
     border: 1px dashed green;
 }
 
@@ -109,7 +107,10 @@ body > header .number,
 body > header .label,
 body > header .title {
     border: 1px dashed red;
-}
+}*/
+
+/* End debug Show lines */
+
 
 
 /* Bodymatter */
