@@ -367,7 +367,7 @@ div > .title {
     font-size: 1.5em;
 }
 
-.assessment-activity {
+.assessment-activity-title {
     font-family: "Arial Narrow", Arial, sans-serif;
     color: #ffffff;
     font-size: 1em;
@@ -536,7 +536,7 @@ section.objectiveset:before {
 
 .lc_a-head, .lc_b-head {
     display: inline-block;
-    width: 70%;
+    width: 85%;
 }
 
 .a-head-bullet {
@@ -637,40 +637,45 @@ section.objectiveset:before {
 }
 
 .lc_position_height_10pc {
-    height: 10%;
+    top: 2em;
 }
 
 .lc_position_height_20pc {
-    height: 20%;
+    top: 4em;
 }
 
 .lc_position_height_30pc {
-    top: 11em;
+    top: 12em;
 }
 
 .lc_position_height_40pc {
-    top: 20em;
+    top: 16em;
 }
 
 .lc_position_height_50pc {
-    top: 13em;
+    top: 22em;
 }
 
 .lc_position_height_60pc {
-    top: 32em;
+    top: 30em;
 }
 
 .lc_position_height_70pc {
-    top: 13em;
-}
-
-.lc_position_height_80pc {
     top: 34em;
 }
 
-.lc_position_height_bottom {
-    top: 41em;
+.lc_position_height_80pc {
+    top: 36em;
 }
+
+.lc_position_height_90pc {
+    top: 38em;
+}
+
+.lc_position_height_bottom {
+    top: 43em;
+}
+
 
 .intro-assessment {
     background: #96a8cc;
@@ -733,6 +738,13 @@ article.objectiveset {
 }
 
 
+
+figure {
+    position: relative;
+    display: inline-block;
+}
+
+
 /* Layout classes - figcaption */
 figcaption {
     font-family: "Arial Narrow", Arial, sans-serif;
@@ -743,14 +755,15 @@ figcaption {
 .lc_figcaption {
     padding-left: 1em;
     background-color: #e1e6ea;
-    height: 20px;
+    min-height: 20px;
 }
 
-.lc_figcaption:before {
+.lc_figcaption:after {
     content: '';
     border-bottom: 20px solid #ffffff;
     border-left: 20px solid #e1e6ea;
     float: right;
+
 }
 
 article.learnervoice {
@@ -806,7 +819,7 @@ p.normal-text {
 }
 
 article {
-    margin-top: 0.5em;
+    margin-top: 1em;
 }
 
 article.normal-text {
@@ -814,9 +827,18 @@ article.normal-text {
 }
 
 /* Articles */
+/*
 article > ul > li {
     font-size: 0.8em;
+    font-weight: bold;
 }
+
+article > ol > li {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+*/
+
 
 
 
@@ -896,10 +918,11 @@ div.keyword-logo {
     background-image: url('../../img/logo-keyterms.gif');
     background-repeat: no-repeat;
     background-position: right top;
+    background-size: 22px 22px;
     top: 0;
     right: 0;
     position: absolute;
-    height: 23px;
+    height: 22px;
     width: 22px;
 }
 
@@ -939,7 +962,7 @@ article.keyword:after {
     border-right: 20px solid transparent;
     position: absolute;
     display: inline-block;
-    padding-right: 45px;
+    padding-right: 52px;
 
 
 }
@@ -947,6 +970,7 @@ article.keyword:after {
 .keyword-text {
     font-family: "Arial Narrow", Arial, sans-serif;
     font-size: 0.75em;
+    line-height: 1em;
     font-weight: bold;
 }
 
@@ -985,10 +1009,11 @@ div.discussionpoint-logo {
     background-image: url('../../img/logo-discussionpoint.gif');
     background-repeat: no-repeat;
     background-position: right top;
+    background-size: 22px 22px;
     top: 0;
     right: 0;
     position: absolute;
-    height: 23px;
+    height: 22px;
     width: 22px;
 }
 
@@ -1022,9 +1047,84 @@ div.discussionpoint-logo {
     font-family: "Arial Narrow", Arial, sans-serif;
     font-size: 0.75em;
     font-weight: bold;
+    line-height: 1em;
 }
 
 .lc_discussionpoint-text {
+    padding-top: 0.8em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+
+/* take it further */
+article.takeitfurther {
+    background-color: #f9df92;
+    position: relative;
+    display: inline-block;
+}
+
+div.takeitfurther-logo {
+    background-image: url('../../img/logo-takeitfurther.gif');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 22px 22px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+}
+
+article.takeitfurther:before {
+    content: '';
+    border-top: 20px solid #ffffff;
+    border-left: 20px solid #f9df92;
+    float: right;
+}
+
+article.takeitfurther:after {
+    content: '';
+    border-top: 20px solid #f9df92;
+    border-right: 20px solid #ffffff;
+    float: right;
+    display: inline-block;
+}
+
+.takeitfurther-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #c4b176;
+}
+
+.lc_takeitfurther-head {
+    color: #ffffff;
+    background-color: #c4b176;
+    height: 25px;
+    border-bottom: 3px solid #c4b176;
+    padding-left: 1.5em;
+}
+
+.lc_takeitfurther-head:after {
+    content: '';
+    border-top: 20px solid #c4b176;
+    border-right: 20px solid transparent;
+    position: absolute;
+    display: inline-block;
+    padding-right: 25px;
+
+
+}
+
+.takeitfurther-text {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 0.75em;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.lc_takeitfurther-text {
     padding-top: 0.8em;
     padding-left: 0.8em;
     padding-right: 0.8em;
@@ -1059,10 +1159,11 @@ div.link-logo {
     background-image: url('../../img/logo-link.gif');
     background-repeat: no-repeat;
     background-position: right top;
+    background-size: 22px 22px;
     top: 0;
     right: 0;
     position: absolute;
-    height: 23px;
+    height: 22px;
     width: 22px;
 }
 
@@ -1096,6 +1197,7 @@ div.link-logo {
     font-family: "Arial Narrow", Arial, sans-serif;
     font-size: 0.75em;
     font-weight: bold;
+    line-height: 1em;
 }
 
 .lc_link-text {
@@ -1107,10 +1209,97 @@ div.link-logo {
 
 
 
+/* Summary */
+article.summary {
+    background-color: #fce2d5;
+    position: relative;
+    display: inline-block;
+}
+
+article.summary:before {
+    content: '';
+    border-top: 20px solid #ffffff;
+    border-left: 20px solid #fce2d5;
+    float: right;
+}
+
+article.summary:after {
+    content: '';
+    border-top: 20px solid #fce2d5;
+    border-right: 20px solid #ffffff;
+    float: right;
+    display: inline-block;
+    /*position: absolute;*/
+
+}
+
+div.summary-logo {
+    background-image: url('../../img/logo-summary.gif');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 22px 22px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+}
+
+.summary-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.lc_summary-head {
+    color: #ffffff;
+    background-color: #ea5733;
+    height: 25px;
+    border-bottom: 3px solid #ea5733;
+    padding-left: 1em;
+}
+
+.lc_summary-head:after {
+    content: '';
+    border-top: 20px solid #ea5733;
+    border-right: 20px solid transparent;
+    position: absolute;
+    display: inline-block;
+    padding-right: 8px;
+    width: 74%;
+}
+
+.summary-text {
+    color: #000000;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.lc_summary-text {
+    padding-left: 0.8em;
+}
+
+ol.summary > li {
+    color: #ea5733;
+    font-weight: bold;
+}
+
+
+ol.summary-text {
+    color: #000000;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+
+
+
+
 /* Case (Case study) */
 article.case {
     background-color: #ebead3;
-    /*position: relative;*/
+    position: relative;
     display: inline-block;
 /*    border-bottom: 20px solid #ebead3;
     border-left: 20px solid #ffffff;*/
@@ -1135,7 +1324,8 @@ div.case-logo {
     background-image: url('../../img/logo-case.gif');
     background-repeat: no-repeat;
     background-position: right top;
-    top: 5px;
+    background-size: 23px 23px;
+    top: 0;
     right: 0;
     position: absolute;
     height: 23px;
@@ -1163,13 +1353,13 @@ div.case-logo {
     border-right: 20px solid transparent;
     position: absolute;
     padding-right: 8px;
-    width: 76%;
+    width: 77%;
 }
 
 .case-text {
-    font-family: "Arial Narrow", Arial, sans-serif;
-    font-size: 0.8em;
-    font-weight: bold;
+    color: #000000;
+    font-size: 1em;
+    font-weight: normal;
 }
 
 .lc_case-text {
@@ -1178,7 +1368,93 @@ div.case-logo {
     padding-right: 0.8em;
 }
 
+ol.case > li {
+    color: #adb144;
+    font-weight: bold;
+}
 
+
+ol.case-text {
+    color: #000000;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+
+
+/* Assessment activity */
+article.assessment-activity {
+    background-color: #e7f2f2;
+    position: relative;
+    display: inline-block;
+}
+
+.assessment-activity-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    background-color: #b7dadb;
+    height: 21px;
+}
+
+.lc_assessment-activity-head {
+    color: #ffffff;
+    background-color: #4fb4b6;
+    border-bottom: 3px solid #4fb4b6;
+    padding-left: 1em;
+    height: 25px;
+}
+
+.lc_assessment-activity-head:after {
+    content: '';
+    border-top: 20px solid #4fb4b6;
+    border-right: 20px solid transparent;
+    position: absolute;
+    display: inline-block;
+    padding-right: 8px;
+}
+
+.assessment-activity-text {
+    color: #000000;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+.lc_assessment-activity-text {
+    padding-left: 0.8em;
+    padding-top: 0.8em;
+}
+
+ul.assessment-activity > li {
+    color: #2bb6aa;
+}
+
+
+ul.assessment-activity-text {
+    color: #000000;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.assessment-activity-text-tip {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #000000;
+}
+
+.lc_assessment-activity-text-tip {
+    background-color: #b7dadb;
+    padding: 0.5em;
+    line-height: 0.8em;
+}
+
+.lc_assessment-activity-criteria {
+    padding: 0.8em;
+    font-weight: normal;
+    font-size: 0.8em;
+    float: right;
+    line-height: 1em;
+}
 
 .footer {
     color: #2bb6aa;
