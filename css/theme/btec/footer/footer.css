@@ -1,0 +1,70 @@
+.footer {
+    color: #2bb6aa;
+    font-size: 14px !important;
+}
+
+.footer-text {
+    color: #000000;
+    font-size: 14px !important;
+    padding-top: 0.50em;
+    padding-bottom: 0.50em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.lc_footer_page_left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.lc_footer_page_right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* line 553, ../sass/theme/g6_layout_fixed.scss */
+div.lc_irg6_pagenum_left {
+    background: #2bb6aa;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+
+    padding-top: 0.50em;
+    padding-bottom: 0.50em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+div.lc_irg6_pagenum_left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 15px solid #d7ece8;
+    border-left: 15px solid #2bb6aa;
+    width: 0;
+}
+
+div.lc_irg6_pagenum_right {
+    background: #2bb6aa;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+    padding-top: 0.50em;
+    padding-bottom: 0.50em;
+    padding-left: 1em;
+    padding-right: 1em;
+    right: 0;
+}
+
+div.lc_irg6_pagenum_right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 15px solid #d7ece8;
+    border-right: 15px solid #2bb6aa;
+    width: 0;
+}
