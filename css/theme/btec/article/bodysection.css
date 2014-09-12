@@ -1,0 +1,518 @@
+/* Bodymatter */
+section.bodymatter {
+    /*min-height: 100%;*/
+    position: relative;
+}
+
+.lc_bodymatter_intro {
+    height: 100%;
+    background-color: #d7ece8;
+}
+
+.lc_bodymatter_content {
+    height: 100%;
+    background-color: #ffffff;
+}
+
+/* Assessment pages */
+.lc_assessment-head {
+    padding-right: 3em;
+    padding-top: 3em;
+    text-align: right;
+}
+
+.assessment-head {
+    position: relative;
+    left: 10em;
+    height: 20px;
+}
+
+.assessment-head-label {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: #d5d900;
+    font-size: 3em;
+    font-weight: bold;
+    padding-left: 1em;
+}
+
+.assessment-head-title {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.assessment-activity-title {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    color: #ffffff;
+    font-size: 1em;
+    position: absolute;
+    top: 1em;
+    left: 12em;
+    width: 22em;
+}
+
+section.assessment-zone {
+    background: #d8dded;
+    width: 793px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    position: relative;
+}
+
+section.assessment-zone::before {
+    content: '';
+    bottom: 0;
+    display: inline-block;
+    position: absolute;
+}
+
+.lc_assessment-zone-left::before {
+    width: 0;
+    left: 0;
+    border-bottom: 4em solid #d7ece8;
+    border-right: 4em solid #d8dded;
+    height: 4em;
+}
+
+.lc_assessment-zone-right::before {
+    right: 0;
+    width: 0;
+    border-bottom: 6em solid #d7ece8;
+    border-left: 6em solid #d8dded;
+}
+
+section.assessment-grid {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+section.assessment-grid::before {
+
+}
+
+.assessment-table {
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+section.assessment-a-block {
+    background: #eaedf6;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    position: relative;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+section.assessment-a-block::before {
+    content: '';
+    bottom: 0;
+    right: 0;
+    border-bottom: 4em solid #d8dded;
+    border-left: 4em solid #eaedf6;
+    width: 0;
+    display: inline-block;
+    position: absolute;
+}
+
+/* Introduction pages */
+
+.objectives > ul > li {
+    font-style: normal;
+    font-weight: bold;
+    color: #2bb6aa;
+    margin-left: 1em;
+}
+
+
+section.introduction {
+    background: #e9f5f3;
+    margin: 0 auto;
+    /*min-height: 100%; *//* Set to minimum height so overflow doesn't get hidden */
+    /*overflow-y: hidden; *//* HIDE overflow; I know, it doesn't make much sense */
+    position: relative;
+}
+
+section.introduction:after, section.objectiveset:after {
+    content: '';
+    bottom: 0em;
+    left: 0em;
+    border-bottom: 3em solid #d7ece8;
+    border-right: 3em solid transparent;
+    display: inline-block;
+    position: absolute;
+}
+
+.intro-text {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-weight: bold;
+    color: #000000;
+    font-size: 0.9em;
+    position: relative;
+}
+
+section.objectiveset:before {
+    content: '';
+    top: 0em;
+    left: 0em;
+    border-top: 3em solid #d7ece8;
+    border-right: 3em solid #000000;
+    display: inline-block;
+    position: absolute;
+}
+
+.lc_head_intro {
+    top: -3em;
+    z-index: 2;
+    position: absolute;
+}
+
+.lc_head_intro:before {
+    content: '';
+    top: -3em;
+    left: -3em;
+    border-top: 3em solid transparent;
+    border-right: 3em solid #000000;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+}
+
+
+/* A-heads */
+.a-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 1.8em;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+    padding-top: 0.5em;
+}
+
+.lc_a-head, .lc_b-head {
+    display: inline-block;
+    width: 85%;
+}
+
+.a-head-bullet {
+    border-top: 10px solid #ffffff;
+    border-left: 20px solid #000000;
+    border-bottom: 10px solid #ffffff;
+    font-size: 0px; line-height: 0%; width: 0px;
+    display: inline-block;
+}
+
+/* B-heads */
+.b-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 1.5em;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+    padding-top: 0.5em;
+}
+
+.b-head-bullet {
+    border-top: 10px solid #ffffff;
+    border-left: 20px solid #2bb6aa;
+    border-bottom: 10px solid #ffffff;
+    font-size: 0px; line-height: 0%; width: 0px;
+    display: inline-block;
+}
+
+/* C-head */
+.c-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 1.2em;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+}
+
+
+.intro-assessment {
+    background: #96a8cc;
+    position: relative;
+    padding-left: 3em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+section > header h1 {
+    position: relative;
+    padding-right: 4em;
+    display: inline-block;
+    /*z-index: 0;*/
+}
+
+section.introduction > header h1 .title {
+    display: inline-block;
+    position: relative;
+    top: -2.5em;
+}
+
+section.objectiveset {
+    background: #c4e3de;
+    position: relative;
+    overflow-y: hidden; /* HIDE overflow; I know, it doesn't make much sense */
+    padding-bottom: 2em;
+}
+
+.lc_objectiveset-head {
+    border-right: 3em solid transparent;
+    border-top: 3em solid #000000;
+    height: 1em;
+    /*top: -4em;*/
+    position: relative;
+    /*z-index: 0;*/
+
+}
+
+/*section.objectiveset > header {*/
+/*border-right: 4em solid transparent;*/
+/*border-top: 4em solid #000000;*/
+/*display: inline-block;*/
+/*position: relative;*/
+/*}*/
+article.objectiveset {
+    display: inline-block;
+    position: relative;
+}
+
+.objectives > li {
+    font-style: normal;
+    font-weight: bold;
+    color: #2bb6aa;
+}
+
+/* PXE Learner Voice */
+article.learnervoice {
+    display: inline-block;
+    position: relative;
+    padding-left: 6em;
+    padding-right: 6em;
+    background: #000000;
+    color: #2bb6aa;
+    overflow-y: hidden; /* HIDE overflow; I know, it doesn't make much sense */
+    min-height: 12em;
+    border-radius: 25px;
+}
+
+img.learnervoice {
+    position: relative;
+    left: 2em;
+    top: -10em;
+}
+
+/* Article - Introduction */
+article.introduction {
+    border: 2px solid #2bb6aa ;
+    position: relative;
+}
+
+article.introduction:before {
+    content: '';
+    border-bottom: 25px solid #2bb6aa;
+    border-left: 25px solid #ffffff;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+article.introduction:after {
+    content: '';
+    border-bottom: 22px solid #ffffff;
+    border-left: 22px solid transparent;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+
+.intro-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2bb6aa;
+}
+
+.lc_intro-head {
+    color: #ffffff;
+    background-color: #2bb6aa;
+    height: 25px;
+    border-bottom: 2px solid #2bb6aa;
+    padding-left: 0.5em;
+}
+
+.lc_intro-head:after {
+    content: '';
+    border-top: 25px solid #2bb6aa;
+    border-right: 25px solid transparent;
+    position: absolute;
+}
+
+
+.lc_intro-text {
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+
+
+/* Case (Case study) */
+article.case {
+    background-color: #ebead3;
+    position: relative;
+    display: inline-block;
+    /*    border-bottom: 20px solid #ebead3;
+        border-left: 20px solid #ffffff;*/
+}
+
+article.case:before {
+    content: '';
+    border-top: 20px solid #ffffff;
+    border-left: 20px solid #ebead3;
+    float: right;
+}
+
+article.case:after {
+    content: '';
+    border-top: 20px solid #ebead3;
+    border-right: 20px solid #ffffff;
+    float: right;
+    display: inline-block;
+}
+
+div.case-logo {
+    background-image: url('/resourcestopxe/img/logo-case.gif');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 23px 23px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 23px;
+    width: 23px;
+}
+
+.case-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-weight: bold;
+    color: #adb144;
+}
+
+.lc_case-head {
+    color: #ffffff;
+    background-color: #adb144;
+    height: 25px;
+    border-bottom: 3px solid #adb144;
+    padding-left: 1em;
+}
+
+.lc_case-head:after {
+    content: '';
+    border-top: 20px solid #adb144;
+    border-right: 20px solid transparent;
+    position: absolute;
+    padding-right: 8px;
+    width: 72%;
+}
+
+.case-text {
+    color: #000000;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.lc_case-text {
+    padding-top: 0.8em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+
+ol.case > li {
+    color: #adb144;
+    font-weight: bold;
+}
+
+
+ol.case-text {
+    color: #000000;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+
+
+/* Assessment activity */
+article.assessment-activity {
+    background-color: #e7f2f2;
+    position: relative;
+    display: inline-block;
+}
+
+.assessment-activity-head {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-weight: bold;
+    background-color: #b7dadb;
+    height: 21px;
+}
+
+.lc_assessment-activity-head {
+    color: #ffffff;
+    background-color: #4fb4b6;
+    border-bottom: 3px solid #4fb4b6;
+    padding-left: 1em;
+    height: 25px;
+}
+
+.lc_assessment-activity-head:after {
+    content: '';
+    border-top: 20px solid #4fb4b6;
+    border-right: 20px solid transparent;
+    position: absolute;
+    display: inline-block;
+    padding-right: 8px;
+}
+
+.assessment-activity-text {
+    color: #000000;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+.lc_assessment-activity-text {
+    padding-left: 0.8em;
+    padding-top: 0.8em;
+}
+
+ul.assessment-activity > li {
+    color: #2bb6aa;
+}
+
+
+ul.assessment-activity-text {
+    color: #000000;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.assessment-activity-text-tip {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #000000;
+}
+
+.lc_assessment-activity-text-tip {
+    background-color: #b7dadb;
+    padding: 0.5em;
+    line-height: 0.8em;
+}
+
+.lc_assessment-activity-criteria {
+    padding: 0.8em;
+    font-weight: normal;
+    font-size: 0.8em;
+    float: right;
+    line-height: 1em;
+}
+

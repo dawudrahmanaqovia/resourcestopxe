@@ -1,0 +1,204 @@
+/* headers */
+body > header .number,
+body > header .label,
+body > header .title {
+    position: relative;
+}
+
+body > header {
+    background-image: url('/resourcestopxe/img/btec-header-turqoise.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0em 0em;
+    height: 160px;
+}
+
+header.lc_header-short-lhs {
+    background-size: cover;
+    height: 50px;
+}
+
+header.lc_header-short-lhs:before {
+    content: '';
+    border-top: 50px solid transparent;
+    border-right: 50px solid #ffffff;
+    float: right;
+}
+
+header.lc_header-short-rhs {
+    background-size: cover;
+    height: 50px;
+}
+
+
+section > span.header {
+    border-right: 3em solid #000000;
+    border-top: 3em solid #d7ece8;
+    display: inline-block;
+    position: relative;
+    /*top: 2em;*/
+    float: left;
+}
+
+/* Titles */
+.unit-title {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    /*font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;*/
+    color: #ffffff;
+    font-size: 0.8em;
+    font-weight: bold;
+    letter-spacing: -0.03em;
+}
+
+.unit-title .label,
+.unit-title .number {
+    font-weight: bold;
+}
+
+.lc_unit-title {
+    position: relative;
+    border-right: 3em solid transparent;
+    border-top: 3em solid #000000;
+    width: 70%;
+}
+
+
+div > .label {
+    padding-left: 1em;
+}
+
+div > .title {
+    padding-left: 2em;
+}
+
+.lc_header-unit-title {
+    color: #ffffff;
+    background-color: #2bb6aa;
+    height: 50px;
+    padding-left: 40px;
+    border-bottom: 35px solid #2bb6aa;
+}
+
+.lc_header-unit-title:after {
+    content: '';
+    border-top: 50px solid #2bb6aa;
+    border-right: 50px solid #000000;
+    position: absolute;
+}
+
+
+.lc_header-unit-title-rhs {
+    color: #000000;
+    background-color: #ffffff;
+    height: 50px;
+    padding-right: 40px;
+    width: 70%;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.lc_header-unit-title-rhs:after {
+    content: '';
+    border-bottom: 50px solid #ffffff;
+    border-right: 50px solid transparent;
+    position: absolute;
+}
+
+.lc_header-unit-label-lhs {
+    color: #ffffff;
+    background-color: #000000;
+    padding-left: 40px;
+    border-bottom: 32px solid #000000;
+}
+
+.lc_header-unit-label-lhs:after {
+    content: '';
+    border-top: 50px solid #000000;
+    border-right: 50px solid #bad031;
+    position: absolute;
+}
+
+.lc_header-unit-label-rhs {
+    color: #ffffff;
+    background-color: #000000;
+    height: 50px;
+    width: 60px;
+    padding-right: 20px;
+    position: absolute;
+    top: 0;
+    left: 712px;
+
+}
+
+.lc_header-unit-label-rhs:after {
+    content: '';
+    border-top: 50px solid transparent;
+    border-right: 50px solid #000000;
+    position: absolute;
+    top: 0;
+    left: -50px;
+
+}
+
+.lc_header-unit-number {
+    color: #000000;
+    background-color: #bad031;
+    padding-left: 31px;
+}
+
+.lc_header-unit-number:after {
+    content: '';
+    border-top: 50px solid #bad031;
+    border-right: 50px solid transparent;
+    position: absolute;
+}
+
+
+.lc_head {
+    border-right: 3em solid transparent;
+    border-top: 3em solid #000000;
+    height: 0em;
+    display: inline-block;
+    margin-left: 3em;
+}
+
+.head {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    /*font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;*/
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: #000000;
+    top: -1.3em;
+}
+
+
+div.lc_chapter_page_img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 0em;
+    position: relative;
+}
+
+div.lc_chapter_title {
+    position: absolute;
+    /*font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;*/
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    /*font-family: "Arial Narrow", Arial, sans-serif;*/
+    font-size: 3em;
+    font-weight: 800;
+    color: #028784;
+    left: 2em;
+    top: 2em;
+}
+
+div.lc_chapter_number {
+    position: absolute;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+    /*font-family: "Arial Narrow", Arial, sans-serif;*/
+    font-size: 13em;
+    color: #FFFFFF;
+    left: 3em;
+    top: 2em;
+}

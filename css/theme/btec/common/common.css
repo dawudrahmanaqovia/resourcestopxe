@@ -1,0 +1,236 @@
+/* HTML5 Pages elements */
+figure {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Layout classes - figcaption */
+figcaption {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.lc_figcaption {
+    padding-left: 1em;
+    background-color: #e1e6ea;
+    min-height: 20px;
+}
+
+.lc_figcaption:after {
+    content: '';
+    border-bottom: 20px solid #ffffff;
+    border-left: 20px solid #e1e6ea;
+    float: right;
+
+}
+
+
+
+/* Layout classes PXE */
+.lc_margin_left_bodymatter_front_page {
+    border-left: 4em solid #d7ece8;
+    /*border-top: 4em solid transparent;*/
+    position: relative;
+}
+
+.lc_margin_right_bodymatter_front_page {
+    background: #e9f5f3;
+    /*margin: 0 auto;*/
+    /*min-height: 100%; *//* Set to minimum height so overflow doesn't get hidden */
+    /*overflow-y: hidden; *//* HIDE overflow; I know, it doesn't make much sense */
+    /*top: -3em;*/
+    /*position: relative;*/
+}
+
+
+/* Layout classes for two columns page */
+.lc_page-column {
+    width: 68%;
+    margin: 1em;
+}
+
+.lc_left-align {
+    float: left;
+}
+
+.lc_right-align {
+    float: right;
+}
+
+.lc_aside_page_left {
+    float: left;
+    width: 20%;
+}
+
+.lc_aside_page_right {
+    float: right;
+    width: 20%;
+}
+
+
+/* Layout classes vertical positioning */
+.lc_position_height_top {
+    top: 1em;
+}
+
+.lc_position_height_10pc {
+    top: 2em;
+}
+
+.lc_position_height_20pc {
+    top: 4em;
+}
+
+.lc_position_height_30pc {
+    top: 12em;
+}
+
+.lc_position_height_40pc {
+    top: 16em;
+}
+
+.lc_position_height_50pc {
+    top: 22em;
+}
+
+.lc_position_height_60pc {
+    top: 30em;
+}
+
+.lc_position_height_70pc {
+    top: 34em;
+}
+
+.lc_position_height_80pc {
+    top: 36em;
+}
+
+.lc_position_height_90pc {
+    top: 38em;
+}
+
+.lc_position_height_bottom {
+    top: 43em;
+}
+
+/* Layout classes margins */
+.lc_marginalia_top {
+    padding-top: 0.5em;
+}
+
+.lc_marginalia_full_width {
+    margin-left: 5em;
+    margin-right: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.lc_marginalia_three_quarter_width {
+    margin-left: 3em;
+    margin-right: 10em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.lc_marginalia_right {
+    padding-right: 5em;
+}
+
+
+/* Layout classes color scheme */
+.lc_color-green {
+    color: #2bb6aa;
+}
+
+.lc_color-blue {
+    color: #004884;
+}
+
+.lc_alphalist {
+    font-weight: normal;
+    color: #000000;
+}
+
+
+
+/* Layout classes decorative */
+/* 3em = 50px */
+.gradient:after {
+    content: '';
+    border-top: 3em solid #000000;
+    border-right: 3em solid transparent;
+    position: absolute;
+}
+
+.gradient {
+    z-index: 1;
+    top: -3em;
+    left: 18em;
+    position: absolute;
+    display: inline-block;
+    height: 3em;
+    width: 100%;
+    /* webkit example */
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 1.0)));
+
+    /* mozilla example - FF3.6+ */
+    background-image: -moz-linear-gradient(right center, rgba(255, 255, 255, 1.0) 20%, rgba(255, 255, 255, 0) 95%);
+
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColor=0, endColorStr=#FFFFFF);
+
+    /* IE8 uses -ms-filter for whatever reason... */
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColor=0, endColoStr=#FFFFFF);
+}
+
+/* Layout classes alignment */
+.lc_pull_up_2em {
+    top: -2em;
+}
+
+.lc_pull_down_2em {
+    top: 2em;
+}
+
+.lc_pull_down_bottom {
+    bottom: 0;
+}
+
+/* Normal text - this is generic - copied name from Word Styles */
+p.normal-text {
+    margin-top: 0.5em;
+}
+
+
+
+.lc_quotestart {
+    /*float: left;*/
+    font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+
+    height: 15px;
+    position: relative;
+    left: -100px;
+    font-size: 1200%;
+    color: #2bb6aa;
+    display: inline-block;
+}
+
+.lc_quoteend {
+    font-family: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+
+    float: right;
+    font-size: 1200%;
+    color: #2bb6aa;
+    position: relative;
+    height: 10px;
+    right: -80px;
+    bottom: 40px;
+}
+
+.lc_featuretext {
+    color: #ffffff;
+    font-weight: normal;
+}
+
